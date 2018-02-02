@@ -1,0 +1,35 @@
+<div class="secondary-bar">
+	<div class="latest-slider-wrap clearfix">
+		<div class="slider-title">
+			latest
+		</div>
+		<div class="slider-nav">
+			<a class="latest-prev" href="">
+				<i class="fa fa-angle-left"></i>
+			</a>
+			<a class="latest-next" href="">
+				<i class="fa fa-angle-right"></i>
+			</a>
+		</div>
+		<!-- Start latest slider -->
+		<div class="owl-carousel owl-theme item-wrap" id="title-slider" style="opacity: 1; display: block;">
+			<div class="owl-wrapper-outer">
+				<div class="owl-wrapper" style="width: 11928px; left: 0px; display: block; transition: all 0ms ease; transform: translate3d(-3408px, 0px, 0px); transform-origin: 3834px center 0px; perspective-origin: 3834px center;">
+					{{#get "posts" limit="5" as |recents|}} {{#foreach recents}}
+					<div class="owl-item" style="width: 852px;">
+						<div class="item">
+							{{#foreach tags}}
+							<a class="tagged-in" href="{{url}}">{{name}}</a>
+							{{/foreach}}
+							<a href="{{url}}" class="heading" title="{{title}}">{{title}}</a>
+						</div>
+					</div>
+					{{/foreach}} {{/get}}
+
+				</div>
+			</div>
+		</div>
+		<!-- end latest slider -->
+	</div>
+	{{> social-links}}
+</div>

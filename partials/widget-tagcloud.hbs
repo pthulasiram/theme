@@ -1,0 +1,17 @@
+<!-- start tag cloud widget -->
+<div class="widget">
+	<h4 class="h5 title">
+		<span>Tag cloud</span>
+	</h4>
+	<div class="content tag-cloud">
+
+		{{#get "tags" limit="all"}} {{#foreach tags}}
+
+		<a href="{{url}}">{{name}}</a>
+
+		{{/foreach}} {{/get}}
+		</ul>
+
+	</div>
+</div>
+<!-- end tag cloud widget -->
